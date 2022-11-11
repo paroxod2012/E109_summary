@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body { font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+
+header {
+  padding: 30px;
+  background-color: #919191;
+  margin-bottom: 30px;
+}
+
+.wrappen {
+  display: flex;
+   padding-top: 20px;
+}
+
+.photo {
+  width: 30vw;
+  height: 40vw;
+}
+
+.content {
+  display: column;
+  justify-content: center;
+  width: 20vw;
+  padding-left: 10%;  
+}
+
+.collapsible {
+  font-size: 22px; 
+  background-color: #ffffff;
+  color: gray;
+  padding: 18px;
+  width: 50vw;
+  border: none;
+}
+
+.active, .collapsible:hover {
+  background-color: rgba(108, 10, 71, 0.1);
+}
+
+.info {
+  width: 50vw;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  font-size: 16px;
+  padding: 20px 0px;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+footer {
+  font-size: 16px;
+  margin: 5% 5%;
+}
+
+  @media screen and (min-width: 750px) {
+    .body { flex: 0 1 calc(40% - 1.5vw);
+    font-size: 14px; }
+
+
+</style>
+</head>
+<body>
+<header>Portfolio</header>
+<div class="wrappen"> 
+  <img class="photo" src="https://i.pinimg.com/originals/64/b4/68/64b46831f79461f68a0bd9f6380615e7.jpg" alt="Women"  > 
+<div class="content">
+  <button type="button" class="collapsible">My work experience</button>
+<div class="info">
+  <ul>
+    <li>A few words about the previous place of work</li>
+  </ul>
+</div>
+<button type="button" class="collapsible">My hobby</button>
+<div class="info">  <ul>
+    <li>A few words about the hobby</li>
+  </ul></div>
+<button type="button" class="collapsible">My personal qualities</button>
+<div class="info"><ul>
+    <li>A few words about my qualities</li>
+  </ul></div>
+  <button type="button" class="collapsible">My expectations from a new job</button>
+<div class="info"><ul>
+    <li>A few words about my expectations</li>
+  </ul></div>
+</div>
+</div>
+
+<footer><center>Contact information: </center></footer>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
